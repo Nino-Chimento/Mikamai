@@ -1,0 +1,5 @@
+ho gestito tramite un secondo array la visibilità, non avendo un dato da poter richiamare
+e mostrare dal back,questo comporta alcune problematiche,perche se riscrivessi e filtrassi 
+direttamente il dato originale,dopo non avrei piu il dato da poter rifiltrare per le altre select.
+
+Ho usato un switch,e un for each invece di un filter.

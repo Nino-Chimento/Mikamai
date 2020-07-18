@@ -1,0 +1,22 @@
+svolgo l interrogazione sql non consocendo gli altri db e consocnedo
+i db relazionali in maniera teorica e non pratica.
+
+
+1 Dato il modello ER sopra, scrivere una query SQL che riporti l’id di tutti i customer
+che hanno effettuato almeno un ordine del prodotto con sku X_Y_Z.
+
+La logica e'stampare l id utente,facendo un innerJoin dei prodtti con
+la linea dei prodtti Items dopodicche confrontare l id orders con line items
+
+select id.customers 
+from customers, orders,line_items products
+inner join products,line_items
+inner join orders,line_items
+where sku.products = X_Y_Z.
+
+
+2 Dato il modello ER sopra, scrivere una query SQL che riporti l’id di tutti gli ordini
+ contenenti almeno due prodotti il cui sku inizi per G.
+
+in questo caso bisognerebbe fare un count di products e stamapre solo qelli con count >1
+dove il prodotto deve essere where like G%
